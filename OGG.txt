@@ -1,1 +1,1039 @@
-6929010490
+-- GUI to Lua
+-----
+-- Version: 2.0.
+-- Made by chrisopdemobiel.
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local CreditHolder = Instance.new("Frame")
+local MARS = Instance.new("TextLabel")
+local HUB = Instance.new("TextLabel")
+local UIGridLayout = Instance.new("UIGridLayout")
+local SectionHolder = Instance.new("Frame")
+local BAudioDecoderFrame = Instance.new("Frame")
+local SectionLeft = Instance.new("TextButton")
+local SectionRight = Instance.new("TextButton")
+local DecoderHolderFrame = Instance.new("Frame")
+local ADecoderFrame = Instance.new("Frame")
+local DecoderFrame = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local DecoderInput = Instance.new("TextBox")
+local ButtonContainer = Instance.new("Frame")
+local Decode = Instance.new("TextButton")
+local DecodeFile = Instance.new("TextButton")
+local CopyID = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local DecoderPageLayout = Instance.new("UIPageLayout")
+local BPlayerlistFrame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local FoundPlayer = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local TargetIcon = Instance.new("ImageLabel")
+local TargetName = Instance.new("TextLabel")
+local Mute = Instance.new("TextButton")
+local DecodePlayer = Instance.new("TextButton")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local CUtilitiesFrame = Instance.new("Frame")
+local UtilitiesMainFrame = Instance.new("Frame")
+local Dupe = Instance.new("TextButton")
+local DupeAmountFrame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local CloneTargetNameFrame = Instance.new("Frame")
+local TextBox_2 = Instance.new("TextBox")
+local Clone = Instance.new("TextButton")
+local DropTools = Instance.new("TextButton")
+local StealTools = Instance.new("TextButton")
+local Demesh = Instance.new("TextButton")
+local AAntiLogFrame = Instance.new("Frame")
+local AntiLogHolderFrame = Instance.new("Frame")
+local AAntiLogSection = Instance.new("Frame")
+local Play = Instance.new("TextButton")
+local BPlay = Instance.new("TextButton")
+local MassPlay = Instance.new("TextButton")
+local InputIDFrame = Instance.new("Frame")
+local TextBox_3 = Instance.new("TextBox")
+local AudioPreviewFrame = Instance.new("Frame")
+local ScrollingFrame_3 = Instance.new("ScrollingFrame")
+local TextBox_4 = Instance.new("TextBox")
+local Sync = Instance.new("TextButton")
+local AudioPlayingLabel = Instance.new("TextLabel")
+local SongInfo = Instance.new("TextLabel")
+local BVisualizerFrame = Instance.new("Frame")
+local Play_2 = Instance.new("TextButton")
+local VisInputIDFrame = Instance.new("Frame")
+local TextBox_5 = Instance.new("TextBox")
+local Sync_2 = Instance.new("TextButton")
+local Set = Instance.new("TextButton")
+local VisTargetNameFrame = Instance.new("Frame")
+local TextBox_6 = Instance.new("TextBox")
+local BassAmountFrame = Instance.new("Frame")
+local TextBox_7 = Instance.new("TextBox")
+local SpeedAmountFrame = Instance.new("Frame")
+local TextBox_8 = Instance.new("TextBox")
+local SensitivityAmountFrame = Instance.new("Frame")
+local TextBox_9 = Instance.new("TextBox")
+local ModesFrame = Instance.new("Frame")
+local ScrollingFrame_4 = Instance.new("ScrollingFrame")
+local Mode1 = Instance.new("TextButton")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Mode2 = Instance.new("TextButton")
+local Mode3 = Instance.new("TextButton")
+local Mode4 = Instance.new("TextButton")
+local AntiLogPageLayout = Instance.new("UIPageLayout")
+local SectionLeft_2 = Instance.new("TextButton")
+local SectionRight_2 = Instance.new("TextButton")
+local DSettingsFrame = Instance.new("Frame")
+local SettingsMainFrame = Instance.new("Frame")
+local RGBChangerFrame = Instance.new("Frame")
+local TextBox_10 = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local CustomMessageFrame = Instance.new("Frame")
+local TextBox_11 = Instance.new("TextBox")
+local UIGradient_2 = Instance.new("UIGradient")
+local Commandbar = Instance.new("TextBox")
+local CommandsList = Instance.new("Frame")
+local ScrollingFrame_5 = Instance.new("ScrollingFrame")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local cmd1 = Instance.new("TextLabel")
+local SectionButtons = Instance.new("Frame")
+local AntiLogger = Instance.new("TextButton")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local AudioDecoder = Instance.new("TextButton")
+local Utilities = Instance.new("TextButton")
+local Settings = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Frame.BorderSizePixel = 0
+Frame.ClipsDescendants = true
+Frame.Position = UDim2.new(0.0792588592, 0, 0.28331995, 0)
+Frame.Size = UDim2.new(0, 510, 0, 305)
+
+CreditHolder.Name = "CreditHolder"
+CreditHolder.Parent = Frame
+CreditHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditHolder.BackgroundTransparency = 1.000
+CreditHolder.Size = UDim2.new(0, 510, 0, 30)
+
+MARS.Name = "MARS"
+MARS.Parent = CreditHolder
+MARS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MARS.BackgroundTransparency = 1.000
+MARS.BorderSizePixel = 0
+MARS.Size = UDim2.new(0, 82, 0, 29)
+MARS.Font = Enum.Font.SourceSansBold
+MARS.Text = "MAR's"
+MARS.TextColor3 = Color3.fromRGB(255, 255, 255)
+MARS.TextSize = 21.000
+
+HUB.Name = "HUB"
+HUB.Parent = CreditHolder
+HUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HUB.BackgroundTransparency = 1.000
+HUB.BorderSizePixel = 0
+HUB.Position = UDim2.new(0.184313729, 0, 0, 0)
+HUB.Size = UDim2.new(0, 82, 0, 29)
+HUB.Font = Enum.Font.SourceSansBold
+HUB.Text = "Hub"
+HUB.TextColor3 = Color3.fromRGB(82, 82, 255)
+HUB.TextSize = 21.000
+
+UIGridLayout.Parent = CreditHolder
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, -56, 0, 0)
+UIGridLayout.CellSize = UDim2.new(0, 100, 0, 50)
+
+SectionHolder.Name = "SectionHolder"
+SectionHolder.Parent = Frame
+SectionHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SectionHolder.BackgroundTransparency = 1.000
+SectionHolder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SectionHolder.BorderSizePixel = 0
+SectionHolder.Position = UDim2.new(0.0140000004, 0, 0.291999996, 0)
+SectionHolder.Size = UDim2.new(0, 379, 0, 208)
+
+BAudioDecoderFrame.Name = "BAudioDecoderFrame"
+BAudioDecoderFrame.Parent = SectionHolder
+BAudioDecoderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BAudioDecoderFrame.BackgroundTransparency = 1.000
+BAudioDecoderFrame.BorderSizePixel = 0
+BAudioDecoderFrame.ClipsDescendants = true
+BAudioDecoderFrame.Position = UDim2.new(0, 550, -0.00100000005, 0)
+BAudioDecoderFrame.Size = UDim2.new(0, 378, 0, 208)
+
+SectionLeft.Name = "SectionLeft"
+SectionLeft.Parent = BAudioDecoderFrame
+SectionLeft.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SectionLeft.Position = UDim2.new(0.465999991, 0, 0.910000026, 0)
+SectionLeft.Size = UDim2.new(0, 23, 0, 20)
+SectionLeft.Font = Enum.Font.SourceSansBold
+SectionLeft.Text = "<"
+SectionLeft.TextColor3 = Color3.fromRGB(255, 255, 255)
+SectionLeft.TextScaled = true
+SectionLeft.TextSize = 20.000
+SectionLeft.TextWrapped = true
+
+SectionRight.Name = "SectionRight"
+SectionRight.Parent = BAudioDecoderFrame
+SectionRight.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SectionRight.Position = UDim2.new(0.569000006, 0, 0.910000026, 0)
+SectionRight.Size = UDim2.new(0, 23, 0, 20)
+SectionRight.Font = Enum.Font.SourceSansBold
+SectionRight.Text = ">"
+SectionRight.TextColor3 = Color3.fromRGB(255, 255, 255)
+SectionRight.TextScaled = true
+SectionRight.TextSize = 20.000
+SectionRight.TextWrapped = true
+
+DecoderHolderFrame.Name = "DecoderHolderFrame"
+DecoderHolderFrame.Parent = BAudioDecoderFrame
+DecoderHolderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DecoderHolderFrame.BackgroundTransparency = 1.000
+DecoderHolderFrame.BorderSizePixel = 0
+DecoderHolderFrame.Position = UDim2.new(0.0476190485, 0, 0.0432692319, 0)
+DecoderHolderFrame.Size = UDim2.new(0, 348, 0, 170)
+
+ADecoderFrame.Name = "ADecoderFrame"
+ADecoderFrame.Parent = DecoderHolderFrame
+ADecoderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ADecoderFrame.BackgroundTransparency = 1.000
+ADecoderFrame.Position = UDim2.new(-0.0488505736, 0, -0.052941177, 0)
+ADecoderFrame.Size = UDim2.new(0, 378, 0, 208)
+
+DecoderFrame.Name = "DecoderFrame"
+DecoderFrame.Parent = ADecoderFrame
+DecoderFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DecoderFrame.Position = UDim2.new(0.0543240309, 0, 0.019174207, 0)
+DecoderFrame.Size = UDim2.new(0, 245, 0, 165)
+
+ScrollingFrame.Parent = DecoderFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0163265299, 0, 0.0363636352, 0)
+ScrollingFrame.Size = UDim2.new(0, 235, 0, 153)
+ScrollingFrame.ScrollBarThickness = 8
+
+DecoderInput.Name = "DecoderInput"
+DecoderInput.Parent = ScrollingFrame
+DecoderInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DecoderInput.BackgroundTransparency = 1.000
+DecoderInput.BorderSizePixel = 0
+DecoderInput.Position = UDim2.new(0.0255319141, 0, 0.0130495559, 0)
+DecoderInput.Size = UDim2.new(0, 216, 0, 332)
+DecoderInput.Font = Enum.Font.SourceSans
+DecoderInput.PlaceholderColor3 = Color3.fromRGB(81, 81, 81)
+DecoderInput.PlaceholderText = "Input here"
+DecoderInput.Text = ""
+DecoderInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+DecoderInput.TextSize = 14.000
+DecoderInput.TextWrapped = true
+DecoderInput.TextXAlignment = Enum.TextXAlignment.Left
+DecoderInput.TextYAlignment = Enum.TextYAlignment.Top
+
+ButtonContainer.Name = "ButtonContainer"
+ButtonContainer.Parent = DecoderFrame
+ButtonContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonContainer.BackgroundTransparency = 1.000
+ButtonContainer.BorderSizePixel = 0
+ButtonContainer.Position = UDim2.new(0.997808039, 0, 0.125844985, 0)
+ButtonContainer.Size = UDim2.new(0, 116, 0, 144)
+
+Decode.Name = "Decode"
+Decode.Parent = ButtonContainer
+Decode.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Decode.Position = UDim2.new(0.729552805, 0, 0.389423043, 0)
+Decode.Size = UDim2.new(0, 92, 0, 30)
+Decode.Font = Enum.Font.SourceSansBold
+Decode.Text = "Decode"
+Decode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Decode.TextSize = 14.000
+
+DecodeFile.Name = "DecodeFile"
+DecodeFile.Parent = ButtonContainer
+DecodeFile.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DecodeFile.Position = UDim2.new(0.729552805, 0, 0.634615362, 0)
+DecodeFile.Size = UDim2.new(0, 92, 0, 30)
+DecodeFile.Font = Enum.Font.SourceSansBold
+DecodeFile.Text = "Decode File"
+DecodeFile.TextColor3 = Color3.fromRGB(255, 255, 255)
+DecodeFile.TextSize = 14.000
+
+CopyID.Name = "CopyID"
+CopyID.Parent = ButtonContainer
+CopyID.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CopyID.Position = UDim2.new(0.729552805, 0, 0.163461536, 0)
+CopyID.Size = UDim2.new(0, 92, 0, 30)
+CopyID.Font = Enum.Font.SourceSansBold
+CopyID.Text = "Copy ID"
+CopyID.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyID.TextSize = 14.000
+
+UIListLayout.Parent = ButtonContainer
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 15)
+
+DecoderPageLayout.Name = "DecoderPageLayout"
+DecoderPageLayout.Parent = DecoderHolderFrame
+DecoderPageLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+DecoderPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
+DecoderPageLayout.EasingStyle = Enum.EasingStyle.Sine
+DecoderPageLayout.Padding = UDim.new(0, 30)
+DecoderPageLayout.ScrollWheelInputEnabled = false
+DecoderPageLayout.TweenTime = 0.300
+
+BPlayerlistFrame.Name = "BPlayerlistFrame"
+BPlayerlistFrame.Parent = DecoderHolderFrame
+BPlayerlistFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BPlayerlistFrame.BackgroundTransparency = 1.000
+BPlayerlistFrame.BorderSizePixel = 0
+BPlayerlistFrame.Position = UDim2.new(-0.0488505736, 0, -0.0538461395, 0)
+BPlayerlistFrame.Size = UDim2.new(0, 378, 0, 208)
+
+Frame_2.Parent = BPlayerlistFrame
+Frame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0476190485, 0, 0.0393665023, 0)
+Frame_2.Size = UDim2.new(0, 349, 0, 171)
+
+ScrollingFrame_2.Parent = Frame_2
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.0286532957, 0, 0.0498770624, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 333, 0, 140)
+ScrollingFrame_2.ScrollBarThickness = 8
+
+FoundPlayer.Name = "FoundPlayer"
+FoundPlayer.Parent = ScrollingFrame_2
+FoundPlayer.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+FoundPlayer.Position = UDim2.new(0.0270270277, 0, 0, 0)
+FoundPlayer.Size = UDim2.new(0, 280, 0, 66)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(167, 167, 167)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = FoundPlayer
+
+TargetIcon.Name = "TargetIcon"
+TargetIcon.Parent = FoundPlayer
+TargetIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TargetIcon.BackgroundTransparency = 1.000
+TargetIcon.BorderSizePixel = 0
+TargetIcon.Position = UDim2.new(0.768198431, 0, 0.121212125, 0)
+TargetIcon.Size = UDim2.new(0, 50, 0, 50)
+TargetIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TargetName.Name = "TargetName"
+TargetName.Parent = FoundPlayer
+TargetName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TargetName.BackgroundTransparency = 1.000
+TargetName.Position = UDim2.new(0.390536219, 0, 0.303477347, 0)
+TargetName.Size = UDim2.new(0, 88, 0, 21)
+TargetName.Font = Enum.Font.SourceSansBold
+TargetName.Text = "Sample_Text"
+TargetName.TextColor3 = Color3.fromRGB(255, 255, 255)
+TargetName.TextScaled = true
+TargetName.TextSize = 14.000
+TargetName.TextWrapped = true
+
+Mute.Name = "Mute"
+Mute.Parent = FoundPlayer
+Mute.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Mute.Position = UDim2.new(0.0499610007, 0, 0.0877040327, 0)
+Mute.Size = UDim2.new(0, 68, 0, 23)
+Mute.Font = Enum.Font.SourceSansBold
+Mute.Text = "Mute"
+Mute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mute.TextSize = 14.000
+
+DecodePlayer.Name = "DecodePlayer"
+DecodePlayer.Parent = FoundPlayer
+DecodePlayer.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DecodePlayer.Position = UDim2.new(0.0499609932, 0, 0.557401001, 0)
+DecodePlayer.Size = UDim2.new(0, 68, 0, 23)
+DecodePlayer.Font = Enum.Font.SourceSansBold
+DecodePlayer.Text = "Decode"
+DecodePlayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+DecodePlayer.TextSize = 14.000
+
+UIListLayout_2.Parent = ScrollingFrame_2
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 5)
+
+CUtilitiesFrame.Name = "CUtilitiesFrame"
+CUtilitiesFrame.Parent = SectionHolder
+CUtilitiesFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CUtilitiesFrame.BackgroundTransparency = 1.000
+CUtilitiesFrame.BorderSizePixel = 0
+CUtilitiesFrame.Position = UDim2.new(0, 1000, -0.00100000005, 0)
+CUtilitiesFrame.Size = UDim2.new(0, 378, 0, 208)
+
+UtilitiesMainFrame.Name = "UtilitiesMainFrame"
+UtilitiesMainFrame.Parent = CUtilitiesFrame
+UtilitiesMainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UtilitiesMainFrame.BackgroundTransparency = 1.000
+UtilitiesMainFrame.BorderSizePixel = 0
+UtilitiesMainFrame.ClipsDescendants = true
+UtilitiesMainFrame.Position = UDim2.new(0, 0, 0.000904963585, 0)
+UtilitiesMainFrame.Size = UDim2.new(0, 378, 0, 207)
+
+Dupe.Name = "Dupe"
+Dupe.Parent = UtilitiesMainFrame
+Dupe.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Dupe.Position = UDim2.new(0.526516199, 0, 0.0704206675, 0)
+Dupe.Size = UDim2.new(0, 82, 0, 24)
+Dupe.Font = Enum.Font.SourceSans
+Dupe.Text = "Dupe"
+Dupe.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dupe.TextSize = 14.000
+
+DupeAmountFrame.Name = "DupeAmountFrame"
+DupeAmountFrame.Parent = UtilitiesMainFrame
+DupeAmountFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DupeAmountFrame.Position = UDim2.new(0.246031746, 0, 0.070420675, 0)
+DupeAmountFrame.Size = UDim2.new(0, 100, 0, 24)
+
+TextBox.Parent = DupeAmountFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox.Position = UDim2.new(0, 0, 0.0865383148, 0)
+TextBox.Size = UDim2.new(0, 100, 0, 18)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox.PlaceholderText = "Dupe Amount"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+CloneTargetNameFrame.Name = "CloneTargetNameFrame"
+CloneTargetNameFrame.Parent = UtilitiesMainFrame
+CloneTargetNameFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CloneTargetNameFrame.Position = UDim2.new(0.246031746, 0, 0.244333714, 0)
+CloneTargetNameFrame.Size = UDim2.new(0, 100, 0, 24)
+
+TextBox_2.Parent = CloneTargetNameFrame
+TextBox_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_2.Position = UDim2.new(0, 0, 0.0865383148, 0)
+TextBox_2.Size = UDim2.new(0, 100, 0, 18)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_2.PlaceholderText = "Target Name"
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
+
+Clone.Name = "Clone"
+Clone.Parent = UtilitiesMainFrame
+Clone.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Clone.Position = UDim2.new(0.526516199, 0, 0.244333714, 0)
+Clone.Size = UDim2.new(0, 82, 0, 24)
+Clone.Font = Enum.Font.SourceSans
+Clone.Text = "Clone"
+Clone.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clone.TextSize = 14.000
+
+DropTools.Name = "DropTools"
+DropTools.Parent = UtilitiesMainFrame
+DropTools.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DropTools.Position = UDim2.new(0.246031746, 0, 0.432739407, 0)
+DropTools.Size = UDim2.new(0, 188, 0, 24)
+DropTools.Font = Enum.Font.SourceSans
+DropTools.Text = "Drop Tools"
+DropTools.TextColor3 = Color3.fromRGB(255, 255, 255)
+DropTools.TextSize = 14.000
+
+StealTools.Name = "StealTools"
+StealTools.Parent = UtilitiesMainFrame
+StealTools.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+StealTools.Position = UDim2.new(0.246031746, 0, 0.587328792, 0)
+StealTools.Size = UDim2.new(0, 188, 0, 24)
+StealTools.Font = Enum.Font.SourceSans
+StealTools.Text = "Steal Tools"
+StealTools.TextColor3 = Color3.fromRGB(255, 255, 255)
+StealTools.TextSize = 14.000
+
+Demesh.Name = "Demesh"
+Demesh.Parent = UtilitiesMainFrame
+Demesh.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Demesh.Position = UDim2.new(0.246031746, 0, 0.746749103, 0)
+Demesh.Size = UDim2.new(0, 188, 0, 24)
+Demesh.Font = Enum.Font.SourceSans
+Demesh.Text = "Demesh"
+Demesh.TextColor3 = Color3.fromRGB(255, 255, 255)
+Demesh.TextSize = 14.000
+
+AAntiLogFrame.Name = "AAntiLogFrame"
+AAntiLogFrame.Parent = SectionHolder
+AAntiLogFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AAntiLogFrame.BackgroundTransparency = 1.000
+AAntiLogFrame.BorderSizePixel = 0
+AAntiLogFrame.Size = UDim2.new(0, 379, 0, 208)
+
+AntiLogHolderFrame.Name = "AntiLogHolderFrame"
+AntiLogHolderFrame.Parent = AAntiLogFrame
+AntiLogHolderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AntiLogHolderFrame.BackgroundTransparency = 1.000
+AntiLogHolderFrame.BorderSizePixel = 0
+AntiLogHolderFrame.ClipsDescendants = true
+AntiLogHolderFrame.Size = UDim2.new(0, 378, 0, 185)
+
+AAntiLogSection.Name = "AAntiLogSection"
+AAntiLogSection.Parent = AntiLogHolderFrame
+AAntiLogSection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AAntiLogSection.BackgroundTransparency = 1.000
+AAntiLogSection.BorderSizePixel = 0
+AAntiLogSection.ClipsDescendants = true
+AAntiLogSection.Position = UDim2.new(0, 0, 0.109671958, 0)
+AAntiLogSection.Size = UDim2.new(0, 378, 0, 185)
+
+Play.Name = "Play"
+Play.Parent = AAntiLogSection
+Play.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Play.Position = UDim2.new(0.328103483, 0, 0.0607588366, 0)
+Play.Size = UDim2.new(0, 82, 0, 24)
+Play.Font = Enum.Font.SourceSans
+Play.Text = "Play"
+Play.TextColor3 = Color3.fromRGB(255, 255, 255)
+Play.TextSize = 14.000
+
+BPlay.Name = "BPlay"
+BPlay.Parent = AAntiLogSection
+BPlay.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+BPlay.Position = UDim2.new(0.561274707, 0, 0.0607588366, 0)
+BPlay.Size = UDim2.new(0, 67, 0, 24)
+BPlay.Font = Enum.Font.SourceSans
+BPlay.Text = "BPlay"
+BPlay.TextColor3 = Color3.fromRGB(255, 255, 255)
+BPlay.TextSize = 14.000
+
+MassPlay.Name = "MassPlay"
+MassPlay.Parent = AAntiLogSection
+MassPlay.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MassPlay.Position = UDim2.new(0.754396379, 0, 0.0607588366, 0)
+MassPlay.Size = UDim2.new(0, 82, 0, 24)
+MassPlay.Font = Enum.Font.SourceSans
+MassPlay.Text = "MassPlay"
+MassPlay.TextColor3 = Color3.fromRGB(255, 255, 255)
+MassPlay.TextSize = 14.000
+
+InputIDFrame.Name = "InputIDFrame"
+InputIDFrame.Parent = AAntiLogSection
+InputIDFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+InputIDFrame.Position = UDim2.new(0.0343915336, 0, 0.0607588366, 0)
+InputIDFrame.Size = UDim2.new(0, 100, 0, 24)
+
+TextBox_3.Parent = InputIDFrame
+TextBox_3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_3.Position = UDim2.new(0, 0, 0.0865383148, 0)
+TextBox_3.Size = UDim2.new(0, 100, 0, 18)
+TextBox_3.Font = Enum.Font.SourceSans
+TextBox_3.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_3.PlaceholderText = "ID Input"
+TextBox_3.Text = ""
+TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_3.TextScaled = true
+TextBox_3.TextSize = 14.000
+TextBox_3.TextWrapped = true
+
+AudioPreviewFrame.Name = "AudioPreviewFrame"
+AudioPreviewFrame.Parent = AAntiLogSection
+AudioPreviewFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+AudioPreviewFrame.ClipsDescendants = true
+AudioPreviewFrame.Position = UDim2.new(0.0370370373, 0, 0.676693141, 0)
+AudioPreviewFrame.Size = UDim2.new(0, 354, 0, 53)
+
+ScrollingFrame_3.Parent = AudioPreviewFrame
+ScrollingFrame_3.Active = true
+ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_3.BackgroundTransparency = 1.000
+ScrollingFrame_3.BorderSizePixel = 0
+ScrollingFrame_3.Position = UDim2.new(0.0254237279, 0, 0.113207549, 0)
+ScrollingFrame_3.Size = UDim2.new(0, 339, 0, 41)
+ScrollingFrame_3.ScrollBarThickness = 8
+
+TextBox_4.Parent = ScrollingFrame_3
+TextBox_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_4.BackgroundTransparency = 1.000
+TextBox_4.BorderSizePixel = 0
+TextBox_4.Size = UDim2.new(0, 323, 0, 107)
+TextBox_4.ClearTextOnFocus = false
+TextBox_4.Font = Enum.Font.SourceSans
+TextBox_4.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_4.PlaceholderText = "(Audio Preview)"
+TextBox_4.Text = ""
+TextBox_4.TextColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_4.TextSize = 14.000
+TextBox_4.TextWrapped = true
+TextBox_4.TextXAlignment = Enum.TextXAlignment.Left
+TextBox_4.TextYAlignment = Enum.TextYAlignment.Top
+
+Sync.Name = "Sync"
+Sync.Parent = AAntiLogSection
+Sync.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Sync.Position = UDim2.new(0.097883597, 0, 0.222921014, 0)
+Sync.Size = UDim2.new(0, 52, 0, 24)
+Sync.Font = Enum.Font.SourceSans
+Sync.Text = "Sync"
+Sync.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sync.TextSize = 14.000
+
+AudioPlayingLabel.Name = "AudioPlayingLabel"
+AudioPlayingLabel.Parent = AAntiLogSection
+AudioPlayingLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AudioPlayingLabel.BackgroundTransparency = 1.000
+AudioPlayingLabel.BorderSizePixel = 0
+AudioPlayingLabel.Position = UDim2.new(0.243697479, 0, 0.221089944, 0)
+AudioPlayingLabel.Size = UDim2.new(0, 200, 0, 37)
+AudioPlayingLabel.Font = Enum.Font.SourceSans
+AudioPlayingLabel.Text = "Audio-Playing"
+AudioPlayingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+AudioPlayingLabel.TextSize = 14.000
+
+SongInfo.Name = "SongInfo"
+SongInfo.Parent = AAntiLogSection
+SongInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SongInfo.BackgroundTransparency = 1.000
+SongInfo.BorderSizePixel = 0
+SongInfo.Position = UDim2.new(0.0343915336, 0, 0.421089947, 0)
+SongInfo.Size = UDim2.new(0, 355, 0, 14)
+SongInfo.Font = Enum.Font.SourceSans
+SongInfo.Text = "Song-Name // 0:00 - 0:00"
+SongInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+SongInfo.TextScaled = true
+SongInfo.TextSize = 14.000
+SongInfo.TextWrapped = true
+
+BVisualizerFrame.Name = "BVisualizerFrame"
+BVisualizerFrame.Parent = AntiLogHolderFrame
+BVisualizerFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BVisualizerFrame.BackgroundTransparency = 1.000
+BVisualizerFrame.BorderSizePixel = 0
+BVisualizerFrame.ClipsDescendants = true
+BVisualizerFrame.Position = UDim2.new(0, 0, 0.109671958, 0)
+BVisualizerFrame.Size = UDim2.new(0, 378, 0, 185)
+
+Play_2.Name = "Play"
+Play_2.Parent = BVisualizerFrame
+Play_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Play_2.Position = UDim2.new(0.328103483, 0, 0.0607588366, 0)
+Play_2.Size = UDim2.new(0, 82, 0, 24)
+Play_2.Font = Enum.Font.SourceSans
+Play_2.Text = "Play"
+Play_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Play_2.TextSize = 14.000
+
+VisInputIDFrame.Name = "VisInputIDFrame"
+VisInputIDFrame.Parent = BVisualizerFrame
+VisInputIDFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+VisInputIDFrame.Position = UDim2.new(0.0343915336, 0, 0.0607588366, 0)
+VisInputIDFrame.Size = UDim2.new(0, 100, 0, 24)
+
+TextBox_5.Parent = VisInputIDFrame
+TextBox_5.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_5.Position = UDim2.new(0, 0, 0.0865383148, 0)
+TextBox_5.Size = UDim2.new(0, 100, 0, 18)
+TextBox_5.Font = Enum.Font.SourceSans
+TextBox_5.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_5.PlaceholderText = "ID Input"
+TextBox_5.Text = ""
+TextBox_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_5.TextScaled = true
+TextBox_5.TextSize = 14.000
+TextBox_5.TextWrapped = true
+
+Sync_2.Name = "Sync"
+Sync_2.Parent = BVisualizerFrame
+Sync_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Sync_2.Position = UDim2.new(0.560846567, 0, 0.0607588477, 0)
+Sync_2.Size = UDim2.new(0, 57, 0, 24)
+Sync_2.Font = Enum.Font.SourceSans
+Sync_2.Text = "Sync"
+Sync_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sync_2.TextSize = 14.000
+
+Set.Name = "Set"
+Set.Parent = BVisualizerFrame
+Set.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Set.Position = UDim2.new(0.754029393, 0, 0.222920984, 0)
+Set.Size = UDim2.new(0, 82, 0, 24)
+Set.Font = Enum.Font.SourceSans
+Set.Text = "Set"
+Set.TextColor3 = Color3.fromRGB(255, 255, 255)
+Set.TextSize = 14.000
+
+VisTargetNameFrame.Name = "VisTargetNameFrame"
+VisTargetNameFrame.Parent = BVisualizerFrame
+VisTargetNameFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+VisTargetNameFrame.Position = UDim2.new(0.729767203, 0, 0.0621621497, 0)
+VisTargetNameFrame.Size = UDim2.new(0, 100, 0, 24)
+
+TextBox_6.Parent = VisTargetNameFrame
+TextBox_6.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_6.Position = UDim2.new(0, 0, 0.0865383148, 0)
+TextBox_6.Size = UDim2.new(0, 100, 0, 18)
+TextBox_6.Font = Enum.Font.SourceSans
+TextBox_6.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_6.PlaceholderText = "Target Name"
+TextBox_6.Text = ""
+TextBox_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_6.TextScaled = true
+TextBox_6.TextSize = 14.000
+TextBox_6.TextWrapped = true
+
+BassAmountFrame.Name = "BassAmountFrame"
+BassAmountFrame.Parent = BVisualizerFrame
+BassAmountFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+BassAmountFrame.Position = UDim2.new(0.0343915373, 0, 0.348648638, 0)
+BassAmountFrame.Size = UDim2.new(0, 173, 0, 24)
+
+TextBox_7.Parent = BassAmountFrame
+TextBox_7.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_7.Position = UDim2.new(0, 0, 0.0865376815, 0)
+TextBox_7.Size = UDim2.new(0, 173, 0, 18)
+TextBox_7.Font = Enum.Font.SourceSans
+TextBox_7.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_7.PlaceholderText = "Bass-Amount (Default 15)"
+TextBox_7.Text = ""
+TextBox_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_7.TextScaled = true
+TextBox_7.TextSize = 14.000
+TextBox_7.TextWrapped = true
+
+SpeedAmountFrame.Name = "SpeedAmountFrame"
+SpeedAmountFrame.Parent = BVisualizerFrame
+SpeedAmountFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SpeedAmountFrame.Position = UDim2.new(0.0343915373, 0, 0.532432437, 0)
+SpeedAmountFrame.Size = UDim2.new(0, 173, 0, 24)
+
+TextBox_8.Parent = SpeedAmountFrame
+TextBox_8.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_8.Position = UDim2.new(0, 0, 0.0865376815, 0)
+TextBox_8.Size = UDim2.new(0, 173, 0, 18)
+TextBox_8.Font = Enum.Font.SourceSans
+TextBox_8.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_8.PlaceholderText = "Speed-Amount (Default 5)"
+TextBox_8.Text = ""
+TextBox_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_8.TextScaled = true
+TextBox_8.TextSize = 14.000
+TextBox_8.TextWrapped = true
+
+SensitivityAmountFrame.Name = "SensitivityAmountFrame"
+SensitivityAmountFrame.Parent = BVisualizerFrame
+SensitivityAmountFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SensitivityAmountFrame.Position = UDim2.new(0.0343915373, 0, 0.710810781, 0)
+SensitivityAmountFrame.Size = UDim2.new(0, 173, 0, 24)
+
+TextBox_9.Parent = SensitivityAmountFrame
+TextBox_9.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_9.Position = UDim2.new(0, 0, 0.0865376815, 0)
+TextBox_9.Size = UDim2.new(0, 173, 0, 18)
+TextBox_9.Font = Enum.Font.SourceSans
+TextBox_9.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_9.PlaceholderText = "Sensitivity-Amount (Default 25)"
+TextBox_9.Text = ""
+TextBox_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_9.TextScaled = true
+TextBox_9.TextSize = 14.000
+TextBox_9.TextWrapped = true
+
+ModesFrame.Name = "ModesFrame"
+ModesFrame.Parent = BVisualizerFrame
+ModesFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ModesFrame.Position = UDim2.new(0.559366763, 0, 0.466346145, 0)
+ModesFrame.Size = UDim2.new(0, 156, 0, 81)
+
+ScrollingFrame_4.Parent = ModesFrame
+ScrollingFrame_4.Active = true
+ScrollingFrame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_4.BackgroundTransparency = 1.000
+ScrollingFrame_4.BorderSizePixel = 0
+ScrollingFrame_4.Position = UDim2.new(0.0384615399, 0, 0.128255203, 0)
+ScrollingFrame_4.Size = UDim2.new(0, 143, 0, 61)
+ScrollingFrame_4.ScrollBarThickness = 8
+
+Mode1.Name = "Mode1"
+Mode1.Parent = ScrollingFrame_4
+Mode1.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Mode1.Position = UDim2.new(0.111888111, 0, 0, 0)
+Mode1.Size = UDim2.new(0, 111, 0, 16)
+Mode1.Font = Enum.Font.SourceSans
+Mode1.Text = "Mode1"
+Mode1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode1.TextSize = 14.000
+
+UIListLayout_3.Parent = ScrollingFrame_4
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 7)
+
+Mode2.Name = "Mode2"
+Mode2.Parent = ScrollingFrame_4
+Mode2.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Mode2.Position = UDim2.new(0.111888111, 0, 0, 0)
+Mode2.Size = UDim2.new(0, 111, 0, 16)
+Mode2.Font = Enum.Font.SourceSans
+Mode2.Text = "Mode2"
+Mode2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode2.TextSize = 14.000
+
+Mode3.Name = "Mode3"
+Mode3.Parent = ScrollingFrame_4
+Mode3.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Mode3.Position = UDim2.new(0.111888111, 0, 0, 0)
+Mode3.Size = UDim2.new(0, 111, 0, 16)
+Mode3.Font = Enum.Font.SourceSans
+Mode3.Text = "Mode3"
+Mode3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode3.TextSize = 14.000
+
+Mode4.Name = "Mode4"
+Mode4.Parent = ScrollingFrame_4
+Mode4.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Mode4.Position = UDim2.new(0.111888111, 0, 0, 0)
+Mode4.Size = UDim2.new(0, 111, 0, 16)
+Mode4.Font = Enum.Font.SourceSans
+Mode4.Text = "Mode4"
+Mode4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode4.TextSize = 14.000
+
+AntiLogPageLayout.Name = "AntiLogPageLayout"
+AntiLogPageLayout.Parent = AntiLogHolderFrame
+AntiLogPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
+AntiLogPageLayout.EasingStyle = Enum.EasingStyle.Sine
+AntiLogPageLayout.Padding = UDim.new(0, 30)
+AntiLogPageLayout.ScrollWheelInputEnabled = false
+AntiLogPageLayout.TweenTime = 0.300
+
+SectionLeft_2.Name = "SectionLeft"
+SectionLeft_2.Parent = AAntiLogFrame
+SectionLeft_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SectionLeft_2.Position = UDim2.new(0.465999991, 0, 0.910000026, 0)
+SectionLeft_2.Size = UDim2.new(0, 23, 0, 20)
+SectionLeft_2.Font = Enum.Font.SourceSansBold
+SectionLeft_2.Text = "<"
+SectionLeft_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SectionLeft_2.TextScaled = true
+SectionLeft_2.TextSize = 20.000
+SectionLeft_2.TextWrapped = true
+
+SectionRight_2.Name = "SectionRight"
+SectionRight_2.Parent = AAntiLogFrame
+SectionRight_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SectionRight_2.Position = UDim2.new(0.569000006, 0, 0.910000026, 0)
+SectionRight_2.Size = UDim2.new(0, 23, 0, 20)
+SectionRight_2.Font = Enum.Font.SourceSansBold
+SectionRight_2.Text = ">"
+SectionRight_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SectionRight_2.TextScaled = true
+SectionRight_2.TextSize = 20.000
+SectionRight_2.TextWrapped = true
+
+DSettingsFrame.Name = "DSettingsFrame"
+DSettingsFrame.Parent = SectionHolder
+DSettingsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DSettingsFrame.BackgroundTransparency = 1.000
+DSettingsFrame.BorderSizePixel = 0
+DSettingsFrame.Position = UDim2.new(0, 1475, -0.00100000005, 0)
+DSettingsFrame.Size = UDim2.new(0, 378, 0, 208)
+
+SettingsMainFrame.Name = "SettingsMainFrame"
+SettingsMainFrame.Parent = DSettingsFrame
+SettingsMainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsMainFrame.BackgroundTransparency = 1.000
+SettingsMainFrame.BorderSizePixel = 0
+SettingsMainFrame.ClipsDescendants = true
+SettingsMainFrame.Position = UDim2.new(0, 0, 0.000904963585, 0)
+SettingsMainFrame.Size = UDim2.new(0, 378, 0, 207)
+
+RGBChangerFrame.Name = "RGBChangerFrame"
+RGBChangerFrame.Parent = SettingsMainFrame
+RGBChangerFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+RGBChangerFrame.Position = UDim2.new(0.380952358, 0, 0.0800825059, 0)
+RGBChangerFrame.Size = UDim2.new(0, 100, 0, 24)
+
+TextBox_10.Parent = RGBChangerFrame
+TextBox_10.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_10.Position = UDim2.new(0, 0, 0.0865383148, 0)
+TextBox_10.Size = UDim2.new(0, 100, 0, 18)
+TextBox_10.Font = Enum.Font.SourceSans
+TextBox_10.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_10.PlaceholderText = "0, 0, 0"
+TextBox_10.Text = ""
+TextBox_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_10.TextScaled = true
+TextBox_10.TextSize = 14.000
+TextBox_10.TextWrapped = true
+
+TextLabel.Parent = RGBChangerFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.870000064, 0, 0.124999925, 0)
+TextLabel.Size = UDim2.new(0, 70, 0, 18)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "RGB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+CustomMessageFrame.Name = "CustomMessageFrame"
+CustomMessageFrame.Parent = SettingsMainFrame
+CustomMessageFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CustomMessageFrame.Position = UDim2.new(0.0566137806, 0, 0.306801915, 0)
+CustomMessageFrame.Size = UDim2.new(0, 346, 0, 98)
+
+TextBox_11.Parent = CustomMessageFrame
+TextBox_11.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_11.Position = UDim2.new(0.0202312134, 0, 0.0856647119, 0)
+TextBox_11.Size = UDim2.new(0, 333, 0, 73)
+TextBox_11.Font = Enum.Font.SourceSans
+TextBox_11.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+TextBox_11.PlaceholderText = "Custom Message"
+TextBox_11.Text = ""
+TextBox_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_11.TextSize = 14.000
+TextBox_11.TextWrapped = true
+TextBox_11.TextXAlignment = Enum.TextXAlignment.Left
+TextBox_11.TextYAlignment = Enum.TextYAlignment.Top
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(167, 167, 167)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Parent = Frame
+
+Commandbar.Name = "Commandbar"
+Commandbar.Parent = Frame
+Commandbar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Commandbar.Position = UDim2.new(0.757232368, 0, 0.82242173, 0)
+Commandbar.Size = UDim2.new(0, 116, 0, 17)
+Commandbar.Font = Enum.Font.SourceSansItalic
+Commandbar.PlaceholderColor3 = Color3.fromRGB(49, 49, 49)
+Commandbar.PlaceholderText = ";input command"
+Commandbar.Text = ""
+Commandbar.TextColor3 = Color3.fromRGB(255, 255, 255)
+Commandbar.TextScaled = true
+Commandbar.TextSize = 20.000
+Commandbar.TextWrapped = true
+
+CommandsList.Name = "CommandsList"
+CommandsList.Parent = Frame
+CommandsList.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CommandsList.BorderColor3 = Color3.fromRGB(27, 42, 53)
+CommandsList.Position = UDim2.new(0.757232368, 0, 0.118032783, 0)
+CommandsList.Size = UDim2.new(0, 115, 0, 199)
+
+ScrollingFrame_5.Parent = CommandsList
+ScrollingFrame_5.Active = true
+ScrollingFrame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_5.BackgroundTransparency = 1.000
+ScrollingFrame_5.BorderSizePixel = 0
+ScrollingFrame_5.Position = UDim2.new(0.0441175364, 0, 0.0320521966, 0)
+ScrollingFrame_5.Size = UDim2.new(0, 103, 0, 186)
+ScrollingFrame_5.ScrollBarThickness = 8
+
+UIListLayout_4.Parent = ScrollingFrame_5
+UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+
+cmd1.Name = "cmd1"
+cmd1.Parent = ScrollingFrame_5
+cmd1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cmd1.BackgroundTransparency = 1.000
+cmd1.BorderSizePixel = 0
+cmd1.Position = UDim2.new(0.112903222, 0, 0, 0)
+cmd1.Size = UDim2.new(0, 96, 0, 16)
+cmd1.Font = Enum.Font.SourceSans
+cmd1.TextColor3 = Color3.fromRGB(49, 49, 49)
+cmd1.TextScaled = true
+cmd1.TextSize = 14.000
+cmd1.TextWrapped = true
+
+SectionButtons.Name = "SectionButtons"
+SectionButtons.Parent = Frame
+SectionButtons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SectionButtons.BackgroundTransparency = 1.000
+SectionButtons.BorderSizePixel = 0
+SectionButtons.Position = UDim2.new(0, 0, 0.19016394, 0)
+SectionButtons.Size = UDim2.new(0, 326, 0, 24)
+
+AntiLogger.Name = "AntiLogger"
+AntiLogger.Parent = SectionButtons
+AntiLogger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AntiLogger.BackgroundTransparency = 1.000
+AntiLogger.BorderSizePixel = 0
+AntiLogger.Size = UDim2.new(0, 116, 0, 19)
+AntiLogger.Font = Enum.Font.SourceSans
+AntiLogger.Text = "Anti-Logger"
+AntiLogger.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiLogger.TextScaled = true
+AntiLogger.TextSize = 14.000
+AntiLogger.TextWrapped = true
+
+UIListLayout_5.Parent = SectionButtons
+UIListLayout_5.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+
+AudioDecoder.Name = "AudioDecoder"
+AudioDecoder.Parent = SectionButtons
+AudioDecoder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AudioDecoder.BackgroundTransparency = 1.000
+AudioDecoder.BorderSizePixel = 0
+AudioDecoder.Position = UDim2.new(0.337988824, 0, 0, 0)
+AudioDecoder.Size = UDim2.new(0, 116, 0, 19)
+AudioDecoder.Font = Enum.Font.SourceSans
+AudioDecoder.Text = "Audio-Decoder"
+AudioDecoder.TextColor3 = Color3.fromRGB(80, 80, 80)
+AudioDecoder.TextScaled = true
+AudioDecoder.TextSize = 14.000
+AudioDecoder.TextWrapped = true
+
+Utilities.Name = "Utilities"
+Utilities.Parent = SectionButtons
+Utilities.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Utilities.BackgroundTransparency = 1.000
+Utilities.BorderSizePixel = 0
+Utilities.Position = UDim2.new(0.648044705, 0, 0, 0)
+Utilities.Size = UDim2.new(0, 80, 0, 19)
+Utilities.Font = Enum.Font.SourceSans
+Utilities.Text = "Utilities"
+Utilities.TextColor3 = Color3.fromRGB(80, 80, 80)
+Utilities.TextScaled = true
+Utilities.TextSize = 14.000
+Utilities.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = SectionButtons
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.957055211, 0, 0, 0)
+Settings.Size = UDim2.new(0, 63, 0, 19)
+Settings.Font = Enum.Font.SourceSans
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(80, 80, 80)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(82, 82, 255)
+Frame_3.Position = UDim2.new(0.0568627454, 0, 0.275409847, 0)
+Frame_3.Size = UDim2.new(0, 60, 0, 5)
