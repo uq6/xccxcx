@@ -1,28 +1,51 @@
-https://discord.com/channels/949520113093189652/965199271940993095
+-- GUI to Lua
+-----
+-- Version: 2.0.
+-- Made by chrisopdemobiel.
 
+-- Instances:
 
-7019410849   9090600111  /9089621161   6754213907  9090599146  9090641737   9090602314   9090600111   9090599146   6992770710    6809154634     6910504716   5124982467   4580280311   6891355937   6808292148  4980557242  4572189014    8703175543   8733668686   7190552486   7006487793    7004609646     6555905311 
-4699895513   9063528270   4534027614   6976858535   7764369437  7213738595   9794033176   9690583867   9657319480   9762695345    6906320466     9658717830
-9595261491    9612877774   9782395447  9805270340    9655722949  9805164704   9709217830   9662978295   8088721155   5376903281    9830011488    9830193365
-9829910709    9829739571   9777514797   9779049792    9787404589  9790211889   9762533016   9792888237   9809520654   9655503054    9711390714    9792574431
-9818485096    9818621041   9551589913   9691471754   9824658239   9645725067 ↔ 9526302163  9751940258  9673502736    9799396157    9664285896   9710835302
-9684852757    9752662594    9752662594  9717907681    9638076416   9637963173    9636748628  9689691961   9818737157   9673661801    9702232052   9771913492
-9814106103    7026389855    6950593634  6875625578    9813072158   8484505509    9827656520   6821415354   9813458785   6751112351    9836550512   6936004330
-9594019093    6781120788    6969006426  6943232352    9752876565   6990035264
- 
+local Notification = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local Text = Instance.new("TextLabel")
 
-my audio:  9955006889    9958365762    9955225537    9957754697    9958080521    9958279911   9955045198   9948416389    9968810181    9968873337    9968738026     9968625585    9978644173    9978785761    9978446630
+--Properties:
 
-require(5466852956).eliza("N4RR_1")
-require(0x22330bb15).Hotladiesinyourarea("N4RR_1")
-require(9039886698).tristytn("N4RR_1")
-require(game:GetService("ReplicatedStorage"):WaitForChild("HDAdminSetup")):GetMain():GetModule("cf"):SetRank(game.Players.N4RR_1, 1, 5, "Perm")
-require(6449959779)("N4RR_1")
+Notification.Name = "Notification"
+Notification.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Notification.BackgroundTransparency = 0.500
+Notification.BorderSizePixel = 0
+Notification.Position = UDim2.new(-1, 0, 0.99000001, -26)
+Notification.Size = UDim2.new(0, 361, 0, 26)
 
-𒈙𒈙 spawn og
-𒈙𒈙 spawn house
-𒈙𒈙 spawn piano
-𒈙𒈙 spawn idol
-𒈙𒈙 spawn rake
+TextLabel.Parent = Notification
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.017399583, 0, 0.115384616, 0)
+TextLabel.Size = UDim2.new(0, 61, 0, 19)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Azure Ware"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
- 
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 85, 0)), ColorSequenceKeypoint.new(0, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = TextLabel
+
+Text.Name = "Text"
+Text.Parent = Notification
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(0.186374649, 0, 0.115384616, 0)
+Text.Size = UDim2.new(0, 264, 0, 19)
+Text.Font = Enum.Font.SourceSans
+Text.Text = ""
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextScaled = true
+Text.TextSize = 14.000
+Text.TextWrapped = true
