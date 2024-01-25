@@ -1,0 +1,34 @@
+local a=true;local b=game.Players.LocalPlayer;local function c()return b.Character and b.Character:FindFirstChild('Head')and b.Character:FindFirstChildOfClass('Humanoid')and b.Character:FindFirstChildOfClass('Humanoid').Health>0 end;task.spawn(function()while task.wait(10)do for d,e in next,workspace:GetDescendants()do if e.ClassName=="ProximityPrompt"then e.HoldDuration=0 end end end end)game['Run Service'].RenderStepped:Connect(function(e)local f=game.Lighting;f.Brightness=2;f.ClockTime=14;f.FogEnd=100000;f.GlobalShadows=false;f.OutdoorAmbient=Color3.fromRGB(128,128,128)f.FogEnd=100000;for d,e in pairs(f:GetDescendants())do if e:IsA("Atmosphere")then e:Destroy()end end;for d,g in pairs(b.Character:GetDescendants())do if g:IsA("BasePart")and g.CanCollide==true then g.CanCollide=false end end;if a and c()then b.Character.HumanoidRootPart.CFrame=b.Character.HumanoidRootPart.CFrame+b.Character.Humanoid.MoveDirection*e*50 end end)game:GetService('UserInputService').JumpRequest:Connect(function()if c()then b.Character.Humanoid.JumpPower=50;b.Character.Humanoid.JumpHeight=8;b.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)end end)local h=Instance.new("ScreenGui")local i=Instance.new("Frame")local j=Instance.new("Frame")local k=Instance.new("TextButton")local l=Instance.new("TextButton")h.Name="main"h.Parent=gethui()h.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;h.ResetOnSpawn=false;i.Parent=h;i.BackgroundColor3=Color3.fromRGB(163,255,137)i.BorderColor3=Color3.fromRGB(103,221,213)i.Position=UDim2.new(1-0.100320168,0,1-0.379746825,0)i.Size=UDim2.new(0,190,0,57)j.Parent=h;j.BackgroundColor3=Color3.fromRGB(163,255,137)j.BorderColor3=Color3.fromRGB(103,221,213)j.Position=UDim2.new(1-0.100320168,0,1-0.479746825,0)j.Size=UDim2.new(0,190,0,57)k.Name="up"k.Parent=i;k.BackgroundColor3=Color3.fromRGB(79,255,152)k.Size=UDim2.new(0,190,0,57)k.Font=Enum.Font.SourceSans;k.Text="no speed"k.TextColor3=Color3.fromRGB(0,0,0)k.TextSize=14.000;k.MouseButton1Up:Connect(function()a=not a end)l.Name="up"l.Parent=j;l.BackgroundColor3=Color3.fromRGB(79,255,152)l.Size=UDim2.new(0,190,0,57)l.Font=Enum.Font.SourceSans;l.Text="jump"l.TextColor3=Color3.fromRGB(0,0,0)l.TextSize=14.000;l.MouseButton1Up:Connect(function()if c()then b.Character.Humanoid.JumpPower=50;b.Character.Humanoid.JumpHeight=8;b.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)end end)
+task.spawn(function()
+    while task.wait(.1) do
+        if pcall(function() return game:GetService("Workspace").Section5.ISPY.Houses and game:GetService("Players").LocalPlayer.PlayerGui.Section5.TextLabel.Text end) then
+            task.wait(1.5)
+            local txt = game:GetService("Players").LocalPlayer.PlayerGui.Section5.TextLabel.Text
+            for i,v in next,game:GetService("Workspace").Section5.ISPY.Houses:GetDescendants() do
+                if not v:FindFirstChild('sddsasddsa') and v.Name:len() >= 3 and string.find(txt:lower(),v.Name:lower()) and string.find(v.ClassName,'Part') then
+                    local b = Instance.new("BoxHandleAdornment")
+                    b.Name = 'sddsasddsa'
+                    b.Parent = v
+                    b.Adornee = v
+                    b.AlwaysOnTop = true
+                    b.ZIndex = 10
+                    b.Size = v.Size + Vector3.new(.5,.5,.5)
+                    b.Transparency = 0.5
+                    b.Color =  BrickColor.new(Color3.new(1,1,1))
+                elseif string.find(txt:lower(),'godzilla') and v.Name == 's' then
+                    local b = Instance.new("BoxHandleAdornment")
+                    b.Name = 'sddsasddsa'
+                    b.Parent = v
+                    b.Adornee = v
+                    b.AlwaysOnTop = true
+                    b.ZIndex = 10
+                    b.Size = v.Size + Vector3.new(.5,.5,.5)
+                    b.Transparency = 0.5
+                    b.Color =  BrickColor.new(Color3.new(1,1,1))
+                elseif v.Name == 'sddsasddsa' then
+                    v:Destroy()
+                end
+            end
+        end
+    end
+end)
